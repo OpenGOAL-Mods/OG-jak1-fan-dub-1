@@ -1027,7 +1027,7 @@
       (logclear! (-> self skel status) (janim-status inited))
       )
   (remove-setting! 'spooling)
-  (set-setting! 'dialog-volume (process->ppointer self) 'abs 0.0)
+  ;; (set-setting! 'dialog-volume (process->ppointer self) 'abs 0.0)
   (cond
     ((and arg1 (>= arg2 0))
      (ja-channel-push! 1 (seconds 0.1))
