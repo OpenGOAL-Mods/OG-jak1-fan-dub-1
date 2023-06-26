@@ -588,6 +588,10 @@
       )
   )
 
+(define *currentCutsceneName* "")
+(define *currentCutsceneFrame* 0)
+
+
 
 (defstate subtitle-process (subtitle)
 
@@ -615,6 +619,7 @@
     (set! (-> self spool-name) #f)
     (set! (-> self cur-channel) (pc-subtitle-channel invalid))
 
+
     ;; check what kind of subtitles are running
     (cond
       ((and (movie?) (-> *art-control* spool-lock) (-> *art-control* active-stream))
@@ -628,6 +633,9 @@
                )
            )
        )
+
+
+
       (*hint-semaphore*
         ;; there's a hint playing
         (set! (-> self spool-name) (-> *hint-semaphore* 0 sound-to-play))

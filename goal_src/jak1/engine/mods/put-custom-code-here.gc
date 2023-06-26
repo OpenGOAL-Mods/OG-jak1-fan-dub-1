@@ -24,6 +24,645 @@
     (defun runs-every-frame ()
       ;;(increase-power-cell-by-one) This is a call to increase-power-cell-by-one defined in define-custom-functions-here.gc
 
+(set! *currentCutsceneName* (-> *art-control* active-stream))
+(if (not (= *currentCutsceneName* #f))
+(with-proc ((handle->process (-> *art-control* spool-lock))) (set! *currentCutsceneFrame* (the int (ja-aframe-num 0))))
+(none))
+
+(if movie?
+      (begin
+
+(if (and (string= *currentCutsceneName* "assistant-firecanyon-resolution") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\assistant-firecanyon-resolution\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "assistant-introduction-blue-eco-switch") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\assistant-introduction-blue-eco-switch\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "assistant-introduction-race-bike") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\assistant-introduction-race-bike\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "assistant-lavatube-end-resolution") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\assistant-lavatube-end-resolution\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "assistant-lavatube-start-resolution") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\assistant-lavatube-start-resolution\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "assistant-reminder-1-blue-eco-switch") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\assistant-reminder-1-blue-eco-switch\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "assistant-reminder-1-generic") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\assistant-reminder-1-generic\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "assistant-reminder-1-race-bike") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\assistant-reminder-1-race-bike\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "assistant-village2-introduction") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\assistant-village2-introduction\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "assistant-village2-introduction-flutflut") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\assistant-village2-introduction-flutflut\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "assistant-village2-introduction-robbers") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\assistant-village2-introduction-robbers\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "assistant-village2-introduction-room") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\assistant-village2-introduction-room\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "assistant-village2-reminder-1-flutflut") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\assistant-village2-reminder-1-flutflut\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "assistant-village2-reminder-1-robbers") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\assistant-village2-reminder-1-robbers\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "assistant-village2-reminder-1-room") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\assistant-village2-reminder-1-room\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "assistant-village2-resolution") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\assistant-village2-resolution\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "assistant-village3-reminder") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\assistant-village3-reminder\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "billy-accept") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\billy-accept\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "billy-introduction") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\billy-introduction\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "billy-reject") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\billy-reject\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "billy-reminder-1") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\billy-reminder-1\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "billy-resolution") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\billy-resolution\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "bird-lady-beach-resolution") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\bird-lady-beach-resolution\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "bird-lady-introduction") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\bird-lady-introduction\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "bird-lady-reminder-1") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\bird-lady-reminder-1\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "bird-lady-reminder-2") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\bird-lady-reminder-2\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "bluesage-resolution") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\bluesage-resolution\\fullaudio.mp3" 100)
+)
+
+(if (and (string= *currentCutsceneName* "death-0182") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\death-0182\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "death-0184") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\death-0184\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "death-0186") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\death-0186\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "death-0187") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\death-0187\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "death-0191") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\death-0191\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "death-0193") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\death-0193\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "death-0195") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\death-0195\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "death-0197") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\death-0197\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "death-0199") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\death-0199\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "death-0202") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\death-0202\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "evilbro-misty-end") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\evilbro-misty-end\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "explorer-introduction") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\explorer-introduction\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "explorer-reminder-1") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\explorer-reminder-1\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "explorer-reminder-2") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\explorer-reminder-2\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "explorer-resolution") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\explorer-resolution\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "farmer-introduction") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\farmer-introduction\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "farmer-reminder-1") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\farmer-reminder-1\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "farmer-reminder-2") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\farmer-reminder-2\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "farmer-resolution") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\farmer-resolution\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "finalbosscam-white-eco") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\finalbosscam-white-eco\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "fisher-accept") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\fisher-accept\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "fisher-introduction") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\fisher-introduction\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "fisher-reject") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\fisher-reject\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "fisher-reminder-1") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\fisher-reminder-1\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "fisher-resolution") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\fisher-resolution\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "fishermans-boat-ride-to-village1-alt") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\fishermans-boat-ride-to-village1-alt\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "gambler-introduction-1") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\gambler-introduction-1\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "gambler-reminder-money") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\gambler-reminder-money\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "gambler-reminder-race") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\gambler-reminder-race\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "gambler-resolution-money") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\gambler-resolution-money\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "gambler-resolution-race") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\gambler-resolution-race\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "geologist-introduction") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\geologist-introduction\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "geologist-reminder-moles") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\geologist-reminder-moles\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "geologist-reminder-money") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\geologist-reminder-money\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "geologist-resolution-moles") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\geologist-resolution-moles\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "geologist-resolution-money") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\geologist-resolution-money\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "green-sagecage-daxter-sacrifice") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\green-sagecage-daxter-sacrifice\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "green-sagecage-introduction") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\green-sagecage-introduction\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "green-sagecage-outro-beat-boss-a") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\green-sagecage-outro-beat-boss-a\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "green-sagecage-outro-beat-boss-b") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\green-sagecage-outro-beat-boss-b\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "green-sagecage-outro-beat-boss-enough-cells") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\green-sagecage-outro-beat-boss-enough-cells\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "green-sagecage-outro-beat-boss-need-cells") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\green-sagecage-outro-beat-boss-need-cells\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "green-sagecage-outro-big-finish") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\green-sagecage-outro-big-finish\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "green-sagecage-outro-preboss") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\green-sagecage-outro-preboss\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "green-sagecage-resolution") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\green-sagecage-resolution\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "mayor-introduction") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\mayor-introduction\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "mayor-reminder-beams") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\mayor-reminder-beams\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "mayor-reminder-donation") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\mayor-reminder-donation\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "mayor-resolution-beams") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\mayor-resolution-beams\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "mayor-resolution-donation") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\mayor-resolution-donation\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "minershort-introduction-gnawers") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\minershort-introduction-gnawers\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "minershort-introduction-orbs") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\minershort-introduction-orbs\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "minershort-introduction-switch") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\minershort-introduction-switch\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "minershort-reminder-1-gnawers") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\minershort-reminder-1-gnawers\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "minershort-reminder-1-orbs") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\minershort-reminder-1-orbs\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "minershort-reminder-1-switch") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\minershort-reminder-1-switch\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "minershort-reminder-2-orbs") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\minershort-reminder-2-orbs\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "minershort-resolution-1-orbs") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\minershort-resolution-1-orbs\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "minershort-resolution-2-orbs") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\minershort-resolution-2-orbs\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "oracle-intro-1") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\oracle-intro-1\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "oracle-intro-2") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\oracle-intro-2\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "oracle-intro-3") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\oracle-intro-3\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "oracle-left-eye-1") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\oracle-left-eye-1\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "oracle-left-eye-2") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\oracle-left-eye-2\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "oracle-left-eye-3") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\oracle-left-eye-3\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "oracle-reminder-1") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\oracle-reminder-1\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "oracle-reminder-2") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\oracle-reminder-2\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "oracle-reminder-3") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\oracle-reminder-3\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "oracle-right-eye-1") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\oracle-right-eye-1\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "oracle-right-eye-2") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\oracle-right-eye-2\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "oracle-right-eye-3") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\oracle-right-eye-3\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "redsage-resolution") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\redsage-resolution\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "sage-bluehut-introduction-crop-dusting") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\sage-bluehut-introduction-crop-dusting\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "sage-bluehut-introduction-prec-arm") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\sage-bluehut-introduction-prec-arm\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "sage-bluehut-reminder-1-crop-dusting") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\sage-bluehut-reminder-1-crop-dusting\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "sage-bluehut-reminder-1-prec-arm") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\sage-bluehut-reminder-1-prec-arm\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "sage-intro-sequence-a") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\sage-intro-sequence-a\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "sage-intro-sequence-d1") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\sage-intro-sequence-d1\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "sage-intro-sequence-d2") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\sage-intro-sequence-d2\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "sage-intro-sequence-e") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\sage-intro-sequence-e\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "sage-introduction-misty-cannon") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\sage-introduction-misty-cannon\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "sage-reminder-1-ecorocks") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\sage-reminder-1-ecorocks\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "sage-reminder-1-generic") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\sage-reminder-1-generic\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "sage-reminder-1-misty-cannon") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\sage-reminder-1-misty-cannon\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "sage-reminder-2-generic") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\sage-reminder-2-generic\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "sage-village3-introduction") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\sage-village3-introduction\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "sage-village3-introduction-dark-eco") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\sage-village3-introduction-dark-eco\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "sage-village3-introduction-rams") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\sage-village3-introduction-rams\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "sage-village3-reminder-1-dark-eco") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\sage-village3-reminder-1-dark-eco\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "sage-village3-reminder-1-rams") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\sage-village3-reminder-1-rams\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "sculptor-introduction") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\sculptor-introduction\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "sculptor-reminder-1") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\sculptor-reminder-1\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "sculptor-resolution") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\sculptor-resolution\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "sidekick-human-intro-sequence-b") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\sidekick-human-intro-sequence-b\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "sidekick-human-intro-sequence-c") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\sidekick-human-intro-sequence-c\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "warrior-introduction") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\warrior-introduction\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "warrior-reminder-1") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\warrior-reminder-1\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "warrior-resolution") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\warrior-resolution\\fullaudio.mp3" 100)
+)
+
+
+(if (and (string= *currentCutsceneName* "yellowsage-resolution") (= *currentCutsceneFrame* 0))
+    (play-rand-sound "SNDresources\\yellowsage-resolution\\fullaudio.mp3" 100)
+)
+      )
+
+      )
+
       (none)
       )
 
