@@ -21,9 +21,13 @@
     ;; Begin function defintions.
     ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;;(set! *currentHintName* *level-hint-spool-name*)
+(define hint-frame 0)
+(define *currentHint* "")
     (defun runs-every-frame ()
       ;;(increase-power-cell-by-one) This is a call to increase-power-cell-by-one defined in define-custom-functions-here.gc
-
+(set! hint-frame (subtitle-str-adjust (current-str-pos (-> *hint-semaphore* 0 sound-id))))
+(set! *currentHint* *level-hint-spool-name*)
 (set! *currentCutsceneName* (-> *art-control* active-stream))
 (if (not (= *currentCutsceneName* #f))
 (with-proc ((handle->process (-> *art-control* spool-lock))) (set! *currentCutsceneFrame* (the int (ja-aframe-num 0))))
@@ -31,6 +35,66 @@
 
 (if movie?
       (begin
+
+(if (and (string= *currentHint* "asstvb40") (= hint-frame 0))
+;;first keira talk
+    (play-rand-sound "SNDresources\\asstvb40\\main.mp3" 100)
+)
+
+(if (and (string= *currentHint* "asstvb41") (= hint-frame 0))
+;;oh shit orbs
+    (play-rand-sound "SNDresources\\asstvb41\\main.mp3" 100)
+)
+
+(if (and (string= *currentHint* "asstvb42") (= hint-frame 0))
+;;wow a cell
+    (play-rand-sound "SNDresources\\asstvb42\\main.mp3" 100)
+)
+
+(if (and (string= *currentHint* "asstvb44") (= hint-frame 0))
+;;wow a cell
+    (play-rand-sound "SNDresources\\asstvb44\\main.mp3" 100)
+)
+
+(if (and (string= *currentHint* "asstvb45") (= hint-frame 0))
+;;wow a cell
+    (play-rand-sound "SNDresources\\asstvb45\\main.mp3" 100)
+)
+
+(if (and (string= *currentHint* "asstvb48") (= hint-frame 0))
+;;wow a cell
+    (play-rand-sound "SNDresources\\asstvb48\\main.mp3" 100)
+)
+
+(if (and (string= *currentHint* "sagevb22") (= hint-frame 0))
+;;nice eco samos
+    (play-rand-sound "SNDresources\\oracle-intro-1\\maian.mp3" 100)
+)
+
+(if (and (string= *currentHint* "sagevb24") (= hint-frame 0))
+;;this is a precursor door
+    (play-rand-sound "SNDresources\\oracle-intro-1\\maian.mp3" 100)
+)
+
+(if (and (string= *currentHint* "sagevb25") (= hint-frame 0))
+;;good work you opened the stupid door
+    (play-rand-sound "SNDresources\\oracle-intro-1\\maain.mp3" 100)
+)
+
+(if (and (string= *currentHint* "sagevb21") (= hint-frame 0))
+;;little green ecos
+    (play-rand-sound "SNDresources\\oracle-intro-1\\maian.mp3" 100)
+)
+
+(if (and (string= *currentHint* "sagevb27") (= hint-frame 0))
+;;double jump
+    (play-rand-sound "SNDresources\\oracle-intro-1\\maian.mp3" 100)
+)
+
+(if (and (string= *currentHint* "sagevb38") (= hint-frame 0))
+;;double jump
+    (play-rand-sound "SNDresources\\oracle-intro-1\\maina.mp3" 100)
+)
 
 (if (and (string= *currentCutsceneName* "assistant-firecanyon-resolution") (= *currentCutsceneFrame* 0))
     (play-rand-sound "SNDresources\\assistant-firecanyon-resolution\\main.mp3" 100)
