@@ -496,7 +496,7 @@
     (none)
     )
   :code (behavior ((arg0 string))
-    (when (and (-> *setting-control* current play-hints) (< 0.0 (-> *setting-control* current dialog-volume)))
+    (when (and (-> *setting-control* current play-hints) (<= 0.0 (-> *setting-control* current dialog-volume)))
       (case (-> self mode)
         (('voicebox)
          (if *target*

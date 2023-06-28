@@ -429,7 +429,7 @@
       (set! (-> gp-0 border-mode) #f)
       (set! (-> gp-0 sfx-volume) (the float (* 5 (the int (+ 0.5 (* 15.0 f0-2))))))
       (set! (-> gp-0 music-volume) (the float (* 5 (the int (+ 0.5 (* 13.0 f0-2))))))
-      (set! (-> gp-0 dialog-volume) (the float (* 5 (the int (+ 0.5 (* 20.0 f0-2))))))
+      (set! (-> gp-0 dialog-volume) 0.0)
       (set! (-> gp-0 ambient-volume) (the float (* 5 (the int (+ 0.5 (* 15.0 f0-2))))))
       (set! (-> gp-0 sfx-volume-movie) (the float (* 5 (the int (+ 0.5 (* 11.0 f0-2))))))
       (set! (-> gp-0 music-volume-movie) (the float (* 5 (the int (+ 0.5 (* 13.0 f0-2))))))
