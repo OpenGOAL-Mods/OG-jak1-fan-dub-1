@@ -1238,7 +1238,7 @@
             )
       (send-event (handle->process (-> obj bonelurker)) 'anim-mode 'clone-anim)
       (send-event (handle->process (-> obj bonelurker)) 'center-joint 3)
-      (set-setting! 'music-volume-movie 'abs 0.0 0)
+      ;;(set-setting! 'music-volume-movie 'abs 0.0 0)
       (set-setting! 'sfx-volume-movie 'abs 0.0 0)
       (set-setting! 'ambient-volume-movie 'abs 0.0 0)
       (dotimes (s5-1 9)
@@ -1563,7 +1563,7 @@
 
 (defmethod play-anim! sequenceC ((obj sequenceC) (arg0 symbol))
   (when arg0
-    (set-setting! 'music-volume-movie 'abs 0.0 0)
+    ;;(set-setting! 'music-volume-movie 'abs 0.0 0)
     (set-setting! 'sfx-volume-movie 'abs 0.0 0)
     (set-setting! 'ambient-volume-movie 'abs 0.0 0)
     (set! (-> obj bonelurker)

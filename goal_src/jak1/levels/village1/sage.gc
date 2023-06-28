@@ -53,7 +53,7 @@
        (((game-task intro))
         (when arg0
           (close-status! (-> obj tasks) (task-status need-introduction))
-          (set-setting! 'music-volume-movie 'abs 0.0 0)
+          ;;(set-setting! 'music-volume-movie 'abs 0.0 0)
           (apply-settings *setting-control*)
           )
         (new 'static 'spool-anim
@@ -229,7 +229,7 @@
      )
     (((task-status need-reward-speech))
      (when arg0
-       (set-setting! 'music-volume-movie 'abs 0.0 0)
+       ;;(set-setting! 'music-volume-movie 'abs 0.0 0)
        (apply-settings *setting-control*)
        (close-status! (-> obj tasks) (task-status need-reward-speech))
        (set! (-> obj assistant)

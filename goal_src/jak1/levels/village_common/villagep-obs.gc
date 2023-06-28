@@ -898,7 +898,7 @@
                         (>= (-> self range) (vector-vector-distance (-> self root-override trans) (-> *target* control trans)))
                         )
                    (and (-> *setting-control* current play-hints)
-                        (<= 0.0 (-> *setting-control* current dialog-volume))
+                        (< 0.0 (-> *setting-control* current dialog-volume))
                         (let ((v1-10 (-> self index)))
                           (cond
                             ((zero? v1-10)

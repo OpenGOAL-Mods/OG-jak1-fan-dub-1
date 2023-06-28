@@ -85,7 +85,7 @@
       (when (and *target*
                  (< (vector-vector-distance (target-pos 0) (-> self root trans)) (-> self range))
                  (-> *setting-control* current play-hints)
-                 (and (<= 0.0 (-> *setting-control* current dialog-volume))
+                 (and (< 0.0 (-> *setting-control* current dialog-volume))
                       (let ((a0-3 (entity-actor-lookup (-> self entity) 'alt-actor 0)))
                         (or (not a0-3) (not (logtest? (-> a0-3 extra perm status) (entity-perm-status dead))))
                         )
