@@ -207,7 +207,7 @@
 
 
 (if (and (string= *currentCutsceneName* "bird-lady-beach-resolution") (= *currentCutsceneFrame* 0))
-    (play-rand-sound "SNDresources\\bird-lady-beach-resolution\\main.mp3" 100)
+    (play-rand-sound "SNDresources\\bird-res\\main.mp3" 100)
 )
 
 
